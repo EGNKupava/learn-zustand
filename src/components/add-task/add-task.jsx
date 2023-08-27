@@ -6,14 +6,20 @@ import { Gap } from '@alfalab/core-components/gap/esm';
 import { Textarea } from '@alfalab/core-components/textarea/esm';
 
 import "./add-task.css";
+import { useTodoStore } from '../../store/todo';
 
 export const AddTask = () => {
   const [inputValue, setInputValue] = useState('');
   const [textareaValue, setTextareaValue] = useState('');
 
+  const addTask = useTodoStore((state) => state.addTask);
 
   const handleAddTaskClick = () => {
-    console.log('CLICK ADD');
+    if (inputValue) {
+      addTask({id: +Date.now(), title: inputValue, description: textareaValue, isDone: false })
+      setInputValue('');
+      setTextareaValue('');
+    }
   }
   const handleInputChange = (_, {value}) => {
     setInputValue(value);
@@ -25,7 +31,7 @@ export const AddTask = () => {
   return (
       <div className='add-task'>
         <div className='top-block'>
-          <Input block={true} label='Чё надо?!' size='m' value={inputValue} onChange={handleInputChange}/>
+          <Input block={true} label='Название задачи' size='m' value={inputValue} onChange={handleInputChange}/>
           <Gap direction="horizontal" size='m'/>
           <IconButton icon={AddLargeMIcon} onClick={handleAddTaskClick}/>
         </div>

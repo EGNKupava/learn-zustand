@@ -2,16 +2,22 @@ import { Status } from '@alfalab/core-components/status/esm';
 import { Checkbox } from '@alfalab/core-components/checkbox/esm';
 import { DotsThreeVerticalMIcon } from '@alfalab/icons-glyph/DotsThreeVerticalMIcon';
 import { IconButton } from '@alfalab/core-components/icon-button/esm';
+import { TrashCanLineMIcon } from '@alfalab/icons-glyph/TrashCanLineMIcon';
 
 import PropTypes from 'prop-types';
 
 import './task.css';
-export const Task = ({ title, description, isDone }) => {
-  const handleChange = (_, {payload}) => {
-    console.log('payload: ', payload);
+import { useTodoStore } from '../../store/todo';
+export const Task = ({ id, title, description, isDone }) => {
+  const changeStatus = useTodoStore((store) => store.changeStatus);
+  const removeTask = useTodoStore((store) => store.removeTask);
+
+  const handleChange = (_, { checked }) => {
+    changeStatus(id, checked)
   }
-
-
+  const handleRemoveClick = () => {
+    removeTask(id)
+  }
 
   return (
   <div className="task" >
@@ -27,12 +33,14 @@ export const Task = ({ title, description, isDone }) => {
       />
     <Status color={isDone ? 'green' : 'orange'}>{isDone ? 'Готово' : 'Сделать'}</Status>
     <div className='right-block'>
+      <IconButton onClick={handleRemoveClick} icon={TrashCanLineMIcon} />
       <IconButton icon={DotsThreeVerticalMIcon} />
     </div>
   </div>
 )}
 
 Task.propTypes = {
+  id: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
   isDone: PropTypes.bool,
