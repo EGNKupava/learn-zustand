@@ -1,0 +1,13 @@
+.task {
+  display: flex;
+  align-items: center;
+  padding: var(--gap-s);
+  border-radius: var(--border-radius-m);
+  box-shadow: var(--shadow-xs);
+  backdrop-filter: invert(7%);
+}
+
+.right-block {
+  display: flex;
+  justify-content: end;
+}

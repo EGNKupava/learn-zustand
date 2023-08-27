@@ -77,7 +77,7 @@
   resolved "https://registry.yarnpkg.com/@alfalab/icons-flag/-/icons-flag-2.3.0.tgz#5f6dba8c705a6a9e68d033352cfeb564061f7cb0"
   integrity sha512-F09+OGpn97U1jXFLVTAlBreaHXKvACB+HJ4Z6xBYp3VbPlzsGhqAOjWGOXxvXeAuuxcxK9T0fyffAectX4lCkQ==
 
-"@alfalab/icons-glyph@^2.108.0":
+"@alfalab/icons-glyph@^2.108.0", "@alfalab/icons-glyph@^2.125.0":
   version "2.125.0"
   resolved "https://registry.yarnpkg.com/@alfalab/icons-glyph/-/icons-glyph-2.125.0.tgz#de5814ec5bd7c151fadc8d668fa991c4aa2cf70a"
   integrity sha512-MHZ0fXijZfbpxFakB5OEJz+QxztCzRVlJteReRvvQ4eXs77SkjJtHOndJBmWf0scQKvctX+65DhrJHpC9ltRcQ==

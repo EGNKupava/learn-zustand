@@ -1,0 +1,11 @@
+
+.todo {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--gap-s);
+}

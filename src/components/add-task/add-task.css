@@ -1,0 +1,8 @@
+.add-task {
+  margin-bottom: var(--gap-m);
+}
+
+.add-task .top-block {
+  display: flex;
+  margin-bottom: var(--gap-s);
+}
