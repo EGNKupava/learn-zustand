@@ -1,12 +1,12 @@
 import './App.css'
-import { Button } from '@alfalab/core-components/button/esm';
+import { Typography } from '@alfalab/core-components/typography/esm';
+import { Todo } from './components/todo/todo';
 
 function App() {
   return (
     <div className='app'>
-      <Button view='accent'>
-         App
-      </Button>
+      <Typography.Title>Zustand practice</Typography.Title>
+      <Todo />
     </div>
   )
 }
