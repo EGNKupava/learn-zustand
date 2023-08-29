@@ -2,7 +2,7 @@
   "todo": {
     "order": ["1"],
     "todos": {
-      "1": { "id": "1", "title": "json-server", "description": "todo smt", "isDone": false }
+      "1": { "id": "1", "title": "Купить молоко", "description": "В копеечке", "isDone": false }
     }
   }
 }
