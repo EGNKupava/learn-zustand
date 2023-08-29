@@ -1,8 +1,19 @@
 {
   "todo": {
-    "order": ["1"],
+    "order": ["1", "2"],
     "todos": {
-      "1": { "id": "1", "title": "Купить молоко", "description": "В копеечке", "isDone": false }
+      "1": {
+        "id": "1",
+        "title": "Купить картошки",
+        "description": "В копеечке",
+        "isDone": false
+      },
+      "2": {
+        "id": "2",
+        "title": "Зайти в обменник",
+        "description": "",
+        "isDone": false
+      }
     }
   }
 }
